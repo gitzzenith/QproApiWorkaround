@@ -2,7 +2,12 @@
 <html lang="en">
     <body>
         <h1>Hello World</h1>
-        <p id="errOut">empty</p>
+        <form onsubmit="return handleSubmit(event)">
+            <label for="ipFrag">Enter a number:</label><br>
+            <input type="number" id="ipFrag" name="ipFrag"><br>
+            <input type="submit" value="JOIN">
+          </form> 
+
         <script src="superCoolCode.js"></script>
     </body>
 </html>

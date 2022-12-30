@@ -1,22 +1,3 @@
-
-/*/ Hide UI
-const data = {
-    "enabled": false
-};
-fetch('http://127.0.0.1:6721/ui_visibility', {
-    mode: 'no-cors',
-    method: 'POST', // or 'PUT'
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-})*/
-
-// Get unique fragment of IP
-ipFragment = parseInt(prompt("Enter unique part of ip"));
-document.getElementById("errOut").innerHTML = ipFragment;
-
-postData("5C8F8A1C-7B5F-4E10-93F9-A0556C43A5BA", ipFragment);
 // Join Match
 async function postData(sessionid, ipFrag) {
     const data = {
@@ -37,3 +18,12 @@ async function postData(sessionid, ipFrag) {
     })
 }
 
+// Runs when join button is clicked
+function handleSubmit(event) {
+    event.preventDefault();
+    var ipFrag = document.getElementById('ipFrag').value;
+    
+    postData("F10C1B4F-382E-49D9-857E-1CADC7DC675C", ipFrag);
+    console.log(ipFrag);
+    return false;
+}
