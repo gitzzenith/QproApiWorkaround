@@ -14,7 +14,7 @@ fetch('http://127.0.0.1:6721/ui_visibility', {
 
 // Join Match
 const data = {
-    "session_id": "F4896F46-EE50-4005-A9F1-7734E4BD8861",
+    "session_id": "B75BB299-36B3-4EEC-B0F4-4E5827032118",
     "team_idx": 0
 };
 fetch('192.168.43.200:6721/join_session', {
