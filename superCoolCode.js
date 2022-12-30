@@ -16,7 +16,7 @@ fetch('http://127.0.0.1:6721/ui_visibility', {
 ipFragment = parseInt(prompt("Enter unique part of ip"));
 document.getElementById("errOut").innerHTML = ipFragment;
 
-postData("B75BB299-36B3-4EEC-B0F4-4E5827032118", ipFragment);
+postData("5C8F8A1C-7B5F-4E10-93F9-A0556C43A5BA", ipFragment);
 // Join Match
 async function postData(sessionid, ipFrag) {
     const data = {
