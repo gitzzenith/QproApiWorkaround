@@ -1,7 +1,7 @@
 htmlContent = '''<!DOCTYPE html>
 <html lang="en">
     <body>
-        <h1>Welcome to ghetto Spark</h1>
+        <h1>Join Session</h1>
         <form onsubmit="return handleJoin(event)">
             <select name="teamid" id="teamid">
                 <option value=0>Orange</option>
