@@ -10,7 +10,7 @@ async function postData(data) {{
     }})
 }}
 function handleJoin(event) {{
-    document.getElementById("feedback").innerHTML = "joining... this may take a few seconds";
+    document.getElementById("feedback").innerHTML = "joining... if you are not redirected in a few seconds, please restart Echo VR and try again";
     sessionid = "{sessionID}";
     ip = "{apiIP}";
     teamid = document.getElementById("teamid").selectedIndex;
