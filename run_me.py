@@ -1,20 +1,3 @@
-htmlContent = '''<!DOCTYPE html>
-<html lang="en">
-    <body>
-        <h1>Join Session</h1>
-        <form onsubmit="return handleJoin(event)">
-            <select name="teamid" id="teamid">
-                <option value=0>Orange</option>
-                <option value=1>Blue</option>
-                <option value=2>Spec</option>
-            </select>
-            <input type="submit" value="Join">
-        </form>
-        <h2 id="feedback"></h2>
-        <script src="superCoolCode.js"></script>
-    </body>
-</html>'''
-
 jsContent = '''/// Join Match
 async function postData(data) {{
     fetch(fetchUrl, {{
@@ -35,8 +18,9 @@ function handleJoin(event) {{
     
     const data = {{
         "session_id": sessionid,
-        "team-idx": teamid
+        "team_idx": teamid
     }};
+    console.log(data)
     for(let i = 0; i < 256; i++) {{
         fetchUrl = 'http://' + ip + i + ':6721/join_session';
         console.log(fetchUrl);
@@ -45,14 +29,7 @@ function handleJoin(event) {{
     return false;
 }}'''
 
-try:
-    ipFile = open('staticIP.txt', 'r')
-except FileNotFoundError:
-    print("Run FIRST_TIME_SETUP.bat first")
-    input("press enter to exit")
-    exit()
-ipStatic = ipFile.read()
-ipFile.close()
+ipStatic = "192.168.43." # this should be the same for everyone
 
 # Ask for sessionID
 sessionID = input("Paste sessionID or Spark Link here:")
@@ -69,10 +46,6 @@ hostname = socket.gethostname()
 local_ip = socket.gethostbyname(hostname)
 SERVERIP = local_ip
 fullAddress = "{}:{}".format(SERVERIP, PORT)
-
-outhtml = open('index.html', 'w')
-outhtml.write(htmlContent.format(serverIP = fullAddress))
-outhtml.close()
 
 outjs = open('superCoolCode.js', 'w')
 outjs.write(jsContent.format(sessionID = sessionID, apiIP = ipStatic))
