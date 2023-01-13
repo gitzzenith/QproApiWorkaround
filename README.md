@@ -12,7 +12,7 @@ Then, clone/download the source from Github
 Run `RUN_ME.bat`
 The window will prompt for a session ID or Spark Link. Paste it and hit enter. It should return a link.
 
-Finally, launch Echo Arena and load up the link from `run_me` in the Meta Quest Browser while in a lobby or game. Feel free to bookmark the link for convenience, it should remain static. Select your team (Currently bugged) and then click join. After a few seconds, you should be loaded into the session.
+Finally, launch Echo Arena and load up the link from `run_me` in the Meta Quest Browser while in a lobby or game. Feel free to bookmark the link for convenience, it should remain static. Select your team and then click join. After a few seconds, you should be loaded into the session.
 
 ## Common Problems
 * Ensure that you are not running a VPN
